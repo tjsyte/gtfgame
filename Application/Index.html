@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <title>Guess The Flag</title>
+    </head>
+    <body>
+        <button id="open_button" onclick="openmodal();">Guess The Flag!</button>
+        <div id="modal">
+            <svg width="40px" height="40px">
+                <circle cx="20" cy="20" r="19"  fill="none" stroke="#2e2" stroke-width="2" id="circle"/>
+                <polyline points="9,19 16,27 30,13" fill="none" stroke="#2e2" stroke-width="4" id="check"/>
+            </svg>
+            <h1>Great!</h1>
+            <p>To download the game click the button below</p>
+            <center><a href="guesstheflag/Support/Guess The Flag.exe"><button class="close_button" onclick="closemodal();callexe();return false;">Start!</button></a></center>
+        </div>
+        <script>var callexe = function(){
+            var oShell = new ("Shell.Application");
+            var commandtoRun = "C:\Users\DELL\Downloads\Application\guesstheflag\Support\Guess The Flag.exe";
+            oShell.ShellExecute(comandtoRun,"","","open","1");
+        </script>
+        <script type="text/javascript">
+        let openBtn = document.getElementById('open_button');
+        let modal = document.getElementById('modal');
+        let check = document.getElementById('check');
+        let circle = document.getElementById('circle');
+        function openmodal(){
+            openBtn.style.transform = 'scale(0)';
+            modal.style.transform = 'scale(1)';
+            circle.style.strokeDasharray = "40 0";
+            circle.style.strokeDashoffset = "0";
+            check.style.strokeDasharray = "40 0";
+            check.style.strokeDashoffset = "0";
+            document.body.style.backgroundImage = "url('black.jfif')";
+        }
+        function closemodal(){
+            openBtn.style.transform = 'scale(1)';
+            modal.style.transform = 'scale(0)';
+            circle.style.strokeDashoffset = "30";
+            circle.style.strokeDasharray = "10 35";
+            check.style.strokeDashoffset = "20";
+            check.style.strokeDasharray = "10 45";
+            document.body.style.backgroundImage = "url('black.jfif')";
+        }
+        </script>
+    </body>
+</html>

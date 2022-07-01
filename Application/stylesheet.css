@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+    padding: 0;
+    background : url(Black.jfif);
+      font-family: 'Helvetica', Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+}
+button{
+    position: absolute;
+    text-transform: uppercase;
+    background: url(spaces.gif);
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: scale(1);
+    transition: 0.5s;
+}
+button:hover{
+    background: url(spaces.gif);
+}
+#modal{
+    transform: scale(0);
+    transition: 0.5s;
+    width: 300px;
+    height: 260px;
+    background: url(spaces.gif);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4),
+                0 0 10px rgba(0, 0, 0, 0.1) inset;
+
+}
+h1{
+    margin-bottom: 0;
+}
+.close_button{
+    transform: scale(1);
+    margin-top: 8px;
+    margin-left: -52px;
+    font-size: 15px;
+}
+svg{
+    margin-top: 25px;
+}
+#circle{
+    stroke-dasharray: 10 35;
+    stroke-dashoffset: 30;
+    transition: 1.2s;
+}
+
+#check{
+    stroke-dasharray: 10 45;
+    stroke-dashoffset: 20;
+    transition: 1.2s;
+}
